@@ -24,6 +24,7 @@ on:
         type: choice
         options:
           - all
+          - mt76x8
           - s905x3_s905d_s912
           - a311d
           - s922x
