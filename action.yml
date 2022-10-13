@@ -9,7 +9,7 @@ inputs:
   openwrt_path:
     description: "Choose mipsel_24kc file path."
     required: false
-    default: "openwrt/bin/targets/*/*/*rootfs.tar.gz"
+    default: "openwrt/bin/targets/ramips/mt76x8"
   openwrt_soc:
     description: "Choose Router SoC."
     required: false
