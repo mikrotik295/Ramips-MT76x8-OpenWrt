@@ -7,17 +7,17 @@ inputs:
     required: false
     default: "ophub"
   openwrt_path:
-    description: "Choose armvirt64 file path."
+    description: "Choose mipsel_24kc file path."
     required: false
     default: "openwrt/bin/targets/*/*/*rootfs.tar.gz"
   openwrt_soc:
-    description: "Choose Amlogic SoC."
+    description: "Choose Router SoC."
     required: false
-    default: "s905d_s905x3"
+    default: "mt76x8"
   openwrt_kernel:
     description: "Choose kernel version."
     required: false
-    default: "5.10.125_5.15.50"
+    default: "5.4.188"
   auto_kernel:
     description: "Auto use the latest kernel."
     required: false
