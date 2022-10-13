@@ -42,9 +42,8 @@
 make_path="${PWD}"
 tmp_path="${make_path}/tmp"
 out_path="${make_path}/out"
-openwrt_path="${make_path}/openwrt-armvirt"
-openwrt_rootfs_file="*rootfs.tar.gz"
-amlogic_path="${make_path}/amlogic-s9xxx"
+openwrt_path="${make_path}/openwrt-mt76x8"
+amlogic_path="${make_path}/mt76x8"
 armbian_path="${amlogic_path}/amlogic-armbian"
 kernel_path="${amlogic_path}/amlogic-kernel"
 uboot_path="${amlogic_path}/amlogic-u-boot"
@@ -52,11 +51,11 @@ configfiles_path="${amlogic_path}/common-files"
 bootfs_path="${configfiles_path}/bootfs"
 openvfd_path="${configfiles_path}/rootfs/usr/share/openvfd"
 # Add custom openwrt firmware information
-op_release="etc/flippy-openwrt-release"
+#op_release="etc/flippy-openwrt-release"
 # Dependency files download repository
-depends_repo="https://github.com/ophub/amlogic-s9xxx-armbian/tree/main/build-armbian"
+#depends_repo="https://github.com/ophub/amlogic-s9xxx-armbian/tree/main/build-armbian"
 # Install/Update script files download repository
-script_repo="https://github.com/ophub/luci-app-amlogic/tree/main/luci-app-amlogic/root/usr/sbin"
+#script_repo="https://github.com/ophub/luci-app-amlogic/tree/main/luci-app-amlogic/root/usr/sbin"
 # Kernel files download repository
 kernel_repo="https://github.com/ophub/kernel/tree/main/pub"
 version_branch="stable"
@@ -74,11 +73,12 @@ build_openwrt=(
     "s905w"
     "s905"
     "s905l3a"
+    "mt76x8"
 )
 # Set OpenWrt firmware size (Unit: MiB, SKIP_MB >= 4, BOOT_MB >= 256, ROOT_MB >= 512)
-SKIP_MB="68"
-BOOT_MB="256"
-ROOT_MB="960"
+SKIP_MB="1"
+BOOT_MB="5"
+ROOT_MB="28"
 #
 # Set font color
 STEPS="[\033[95m STEPS \033[0m]"
